@@ -1,0 +1,24 @@
+<form class="form-horizontal" align="center">
+<fieldset>
+    <div class="form-group" align="center">
+    <label for="Email_id" class="col-md-4 control-label">Full Name: </label>
+    <input type="text" class="form-control" ng-model="reg_Name"  placeholder="Enter name" style="width:150px" required>
+  </div>
+  <div class="form-group" align="center">
+    <label for="Email_id" class="col-md-4 control-label">Email address: </label>
+    <input id="reg_Email_id" type="email" class="form-control" ng-model="reg_Email_id" aria-describedby="emailHelp" placeholder="Enter email" style="width:150px" required>
+  </div>
+  <div class="form-group" align="center">
+    <label for="Pwd" class="col-md-4 control-label">Password: </label>
+    <input id="reg_Pwd" type="password" class="form-control" ng-model="reg_Pwd" ng-change="match()" placeholder="Password" style="width:150px" required>
+  </div>
+    <div class="form-group" align="center">
+    <label for="Pwd" class="col-md-4 control-label">Re-Enter Password: </label>
+    <input id="reg_Cnf_Pwd" type="password" class="form-control" ng-model="reg_Cnf_Pwd" ng-change="match()" ng-focus = "show=true" placeholder="Confirm Password" style="width:150px" required><br/>
+    <span ng-show="show"><font color="red">Passwords missmatch!!!</font></span>    
+  </div>
+  <button type="submit" class="btn btn-primary" ng-click="reg()">Register</button>
+    <button type="reset" class="btn btn-danger">Clear</button>
+    <a href="#/Login.html">Back to login.</a>
+    </fieldset>
+</form>

@@ -1,0 +1,28 @@
+<div style="top: 200px">
+    <div class="menu" id="div_SearchContainer" align="center">
+    <h1 align="absolute" style="text-align: center; color: #1ab188">Search your place of interest!</h1>
+    <input type="text" id="txt_placeName" placeholder="Enter the place you want to search for" style="margin-left: 100px" align="center">
+    <input type="text" id="txt_searchFilter" placeholder="Enter the search query" align="center"><br/><br/>
+    <button id="btn_getReview" ng-click="getVenues()">Get Venues</button>
+    <a href="#/Login.html">click here to logout.</a>
+    </div>
+    <div id="div_VenueList">
+      <h2 style="text-align: center; color: #1ab188"> Top Five Picks From FourSquare Review API </h2>
+      <ul>
+       <li ng-repeat="venue in venueList" ng-if="venueList" align="center">
+          <a  href="" ng-click="getReviews(venue)" style="font-size: x-large; color: #5e5e5e; text-align: center;" >{{venue.name}}</a>
+        </li>
+      </ul>
+
+    </div>
+    <div id="div_ReviewList" style="display:none;" ng-model="ReviewWithSentiment" align="center">
+
+            <table border="1px" align="center"> <tr>Sentiment Analysis From Using Alchemy API</tr>
+                <tr> <td>Most recent review</td> <td>{{ReviewWithSentiment.reviewText}}</td> </tr>
+                <tr> <td>Sentiment of the review</td> <td>{{ReviewWithSentiment.sentiment}}</td> </tr>
+                <tr> <td>Sentiment Score of the review</td> <td>{{ReviewWithSentiment.score}}</td> </tr>
+                <tr>{{ReviewWithSentiment.reviewText}} </tr>
+            </table>
+
+    </div>
+  </div>

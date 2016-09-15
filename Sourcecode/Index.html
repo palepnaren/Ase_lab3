@@ -1,0 +1,53 @@
+<!doctype html>
+<html ng-app="Naren">
+    
+<head>
+ <div class="header" >
+    <h1 align="center">Mashup of api's</h1>
+</div>
+    <meta name="google-signin-client_id" content="173106805488-neoj46vaai4tp3dduudgfk1ta53t27uq.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+     
+</head>
+   
+
+   
+<body style="background-color:lightgreen;">
+    
+    <div ng-view >
+    
+    </div>
+    <div class="g-signin2" data-onsuccess="onSignIn" align="center">
+     <button type="submit">Google sigin</button>
+    </div>
+    <script>
+        function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail());
+    window.location = "Ase_lab3/Views/Home.html";        
+}</script>
+    
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <script src="Ase_lab3/script/angular-route.js"></script>
+    <script src="Ase_lab3/Controllers/route.js"></script>
+    <script src="Ase_lab3/Controllers/Reg_Controller.js"></script>
+    <script src="Ase_lab3/Controllers/Login_Controller.js"></script>
+    <script src="Ase_lab3/Controllers/Home_Controller.js"></script>
+   <!-- <script src="Ase_lab3/Services/"></script> --> <!--add the script link after done.-->
+    
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAH6ltMJQs7XtCWzsSVr_kxDch2M61MF0g?libraries=places&sensor=false"></script>
+ <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+   
+    
+    
+    
+</body>
+</html>
